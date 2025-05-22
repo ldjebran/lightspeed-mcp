@@ -1,7 +1,7 @@
 [project]
-name = "lightspeed-aap-mcp"
+name = "lightspeed-mcp"
 version = "0.1.0"
-description = "mcp server for Lightspeed AAP"
+description = "mcp server for Lightspeed"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
