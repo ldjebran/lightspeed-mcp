@@ -1,6 +1,6 @@
 from os import environ
 
-from lightspeed_mcp.registry import register_tools
+from lightspeed_mcp.registry import register_sample_tools
 from lightspeed_mcp.server import LightspeedAAPServer
 
 from lightspeed_mcp.authentication import LightspeedAuthenticationBackend
@@ -25,7 +25,7 @@ mcp = LightspeedAAPServer(
 )
 
 
-register_tools(mcp)
+register_sample_tools(mcp)
 
 if __name__ == "__main__":
     mcp.run(transport="sse")
