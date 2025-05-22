@@ -1,0 +1,18 @@
+[project]
+name = "lightspeed-aap-mcp"
+version = "0.1.0"
+description = "mcp server for Lightspeed AAP"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.9.0",
+]
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["lightspeed_mcp"]
