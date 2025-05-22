@@ -7,6 +7,9 @@ from lightspeed_mcp.authentication import LightspeedAuthenticationBackend
 from lightspeed_mcp.authentication.validators.aap_token_validator import (
     AAPTokenValidator,
 )
+from lightspeed_mcp.authentication.validators.aap_jwt_validator import (
+    AAPJWTValidator,
+)
 
 from mcp.server.fastmcp.utilities.logging import configure_logging
 
@@ -17,6 +20,7 @@ AAP_URL = environ.get("AAP_URL", "https://localhost")
 mcp = LightspeedAAPServer(
     auth_backend=LightspeedAuthenticationBackend(
         authentication_validators=[
+            AAPJWTValidator(AAP_URL, verify_cert=False),
             AAPTokenValidator(AAP_URL, verify_cert=False),
         ]
     ),
